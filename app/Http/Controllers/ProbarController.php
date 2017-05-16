@@ -16,6 +16,6 @@ class ProbarController extends Controller
   	public function json() 
   	{
   		$usuarios = Motor::all();
-  		return compact('usuarios');
+  		return compact('motores');
   	}
 }

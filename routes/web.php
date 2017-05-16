@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/pruebaIndex', 'ProbarController@index');
+Route::get('/elementosMotores', 'ComponentesController@jsonMotores');
+
+Route::get('/elementosMarcos', 'ComponentesController@jsonMarcos');
 
 Route::get('/elementosJson', 'ProbarController@json');

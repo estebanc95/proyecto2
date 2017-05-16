@@ -8,7 +8,7 @@
         <title>Simulador de Drones - IAW 2017</title>
 
         <!-- Bootstrap -->
-        <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Mi Estilo -->
         <link id="cascadaStyles" href="#" rel="stylesheet">
@@ -309,55 +309,55 @@
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="/public/js/bootstrap.min.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
 
             <!-- Include all files to jquery cookies-->
-            <script src="/public/jqueryCookie/jquery.cookie.js"></script>
+            <script src="/jqueryCookie/jquery.cookie.js"></script>
 
 
             <!--Cambios de estilos-->
 
-            <script src="/public/jsCreados/cambioDeEstilo/cookiesSave.js"></script>
+            <script src="/jsCreados/cambioDeEstilo/cookiesSave.js"></script>
 
-            <script src="/public/jsCreados/cambioDeEstilo/changeStyle.js"></script>
+            <script src="/jsCreados/cambioDeEstilo/changeStyle.js"></script>
 
             <!-- Precargados de la web-->
 
-            <script src="/public/jsCreados/precargados/precargar1.js"></script>
+            <script src="/jsCreados/precargados/precargar1.js"></script>
 
-            <script src="/public/jsCreados/precargados/precargar2.js"></script>
+            <script src="/jsCreados/precargados/precargar2.js"></script>
 
-            <script src="/public/jsCreados/precargados/randomCargado.js"></script>
+            <script src="/jsCreados/precargados/randomCargado.js"></script>
 
             <!-- Seleccion de componentes -->
 
-            <script src="/public/jsCreados/seleccionComponentes/seleccionarMotor.js"></script>
+            <script src="/jsCreados/seleccionComponentes/seleccionarMotor.js"></script>
 
-            <script src="/public/jsCreados/seleccionComponentes/seleccionarMarco.js"></script>
+            <script src="/jsCreados/seleccionComponentes/seleccionarMarco.js"></script>
 
-            <script src="/public/jsCreados/seleccionComponentes/seleccionarBateria.js"></script>
+            <script src="/jsCreados/seleccionComponentes/seleccionarBateria.js"></script>
 
-            <script src="/public/jsCreados/seleccionComponentes/seleccionarCamara.js"></script>
+            <script src="/jsCreados/seleccionComponentes/seleccionarCamara.js"></script>
 
-            <script src="/public/jsCreados/seleccionComponentes/seleccionarGps.js"></script>
+            <script src="/jsCreados/seleccionComponentes/seleccionarGps.js"></script>
 
-            <script src="/public/jsCreados/seleccionComponentes/seleccionarControladores.js"></script>
+            <script src="/jsCreados/seleccionComponentes/seleccionarControladores.js"></script>
 
             <!-- Scroll -->
 
-            <script src="/public/jsCreados/scroll/volver.js"></script>
+            <script src="/jsCreados/scroll/volver.js"></script>
 
-            <script src="/public/jsCreados/scroll/bajarEstilo2.js"></script>
+            <script src="/jsCreados/scroll/bajarEstilo2.js"></script>
 
             <!-- Cambio de componentes -->
 
-            <script src="/public/jsCreados/componentes/cambiarComponentes.js"></script>
+            <script src="/jsCreados/componentes/cambiarComponentes.js"></script>
 
-            <script src="/public/jsCreados/componentes/cargarElementos.js"></script>
+            <script src="/jsCreados/componentes/cargarElementos.js"></script>
 
-            <script src="/public/jsCreados/componentes/cargarComponentesIniciales.js"></script>
+            <script src="/jsCreados/componentes/cargarComponentesIniciales.js"></script>
 
-            <script src="/public/jsCreados/componentes/cargarComponentes.js"></script>
+            <script src="/jsCreados/componentes/cargarComponentes.js"></script>
 
 
 
