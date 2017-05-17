@@ -23,4 +23,12 @@ Route::get('/elementosMotores', 'ComponentesController@jsonMotores');
 
 Route::get('/elementosMarcos', 'ComponentesController@jsonMarcos');
 
+Route::get('/elementosCamaras', 'ComponentesController@jsonCamaras');
+
+Route::get('/elementosBaterias', 'ComponentesController@jsonBaterias');
+
+Route::get('/elementosGps', 'ComponentesController@jsonGps');
+
+Route::get('/elementosControles', 'ComponentesController@jsonControles');
+
 Route::get('/elementosJson', 'ProbarController@json');

@@ -43,4 +43,10 @@ class ComponentesController extends Controller
   		$gps = Gps::all();
   		return compact('gps');
   	}
+    
+     public function jsonControles() 
+  	{
+  		$controles = Control::all();
+  		return compact('controles');
+  	}
 }
