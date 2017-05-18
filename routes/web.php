@@ -30,5 +30,3 @@ Route::get('/elementosBaterias', 'ComponentesController@jsonBaterias');
 Route::get('/elementosGps', 'ComponentesController@jsonGps');
 
 Route::get('/elementosControles', 'ComponentesController@jsonControles');
-
-Route::get('/elementosJson', 'ProbarController@json');

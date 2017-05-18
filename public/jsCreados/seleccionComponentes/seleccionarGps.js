@@ -1,3 +1,4 @@
+
 $( "#imgGps" ).click(function() {
     $("#claseDeComp,#tablaComp").empty();
     $("#claseDeComp").prepend("GPS");
@@ -9,15 +10,22 @@ $( "#imgGps" ).click(function() {
     }, 500);
 
 
-    var myjson =$.getJSON("/public/json/datosDron.json", function(json) {
+    var jsonGps;
+    $.ajax({
+        url: "/elementosGps",
+        context: document.body,
+        success: function (data) {
+            pedido = data;
+            jsonGps = pedido.gps;
 
-        var i=0;
-        var len=0;
-        var gps=json.gps;
-        for (i=0, len=gps.length; i<len ; i++){
-            atributos="Nombre: "+gps[i].nombre+
+            var i=0;
+            var len=0;
+            var gps=jsonGps;
+            for (i=0, len=jsonGps.length; i<len ; i++){
+                atributos="Nombre: "+gps[i].nombre+
                     " - Modelo: "+gps[i].modelo;
-            cargarElementos(5,gps[i],i,atributos);
+                cargarElementos(5,gps[i],i,atributos);
+            }
         }
     });
 });

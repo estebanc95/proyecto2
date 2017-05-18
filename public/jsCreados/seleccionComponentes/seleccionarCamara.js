@@ -9,16 +9,23 @@ $( "#imgCamara" ).click(function() {
     }, 500);
 
 
-    var myjson =$.getJSON("/public/json/datosDron.json", function(json) {
+    var jsonCamara;
 
-        var i=0;
-        var len=0;
-        var camaras=json.camaras;
-        for (i=0, len=camaras.length; i<len ; i++){
-            atributos="Modelo: "+camaras[i].modelo+
+    $.ajax({
+        url: "/elementosCamaras",
+        context: document.body,
+        success: function (data) {
+            pedido = data;
+            jsonCamara = pedido.camaras;
+            var i=0;
+            var len=0;
+            var camaras=jsonCamara;
+            for (i=0, len=jsonCamara.length; i<len ; i++){
+                atributos="Modelo: "+camaras[i].modelo+
                     " - Marca: "+camaras[i].marca+
                     " - Megapixeles: "+camaras[i].megapixeles;
-            cargarElementos(4,camaras[i],i,atributos);
+                cargarElementos(4,camaras[i],i,atributos);
+            }
         }
     });
 });

@@ -5,7 +5,7 @@ $( "#randomModelos" ).click(function() {
         scrollTop: $("#menuDeArmado").offset().top
     }, 500);
 
-    var myjson =$.getJSON("/public/json/datosDron.json", function(json) {
+    var myjson =$.getJSON("/json/datosDron.json", function(json) {
 
 
         var randomMarco = Math.floor((Math.random() * json.marcos.length));

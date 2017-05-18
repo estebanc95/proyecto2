@@ -9,18 +9,25 @@ $( "#imgMarco" ).click(function() {
     }, 500);
 
 
-    var myjson =$.getJSON("/public/json/datosDron.json", function(json) {
+    var jsonMarco;
 
-        var i=0;
-        var len=0;
-        var marcos=json.marcos;
-        for (i=0, len=marcos.length; i<len ; i++){
-            atributos="Modelo: "+marcos[i].modelo+
+    $.ajax({
+        url: "/elementosMarcos",
+        context: document.body,
+        success: function (data) {
+            pedido = data;
+            jsonMarco = pedido.marcos;
+            var i=0;
+            var len=0;
+            var marcos=jsonMarco;
+            for (i=0, len=jsonMarco.length; i<len ; i++){
+                atributos="Modelo: "+marcos[i].modelo+
                     " - Marca: "+marcos[i].marca+
                     " - Color: "+marcos[i].color+
                     " - Material: "+marcos[i].material+
                     " - Número de helices: "+marcos[i].numeroHelices;
-            cargarElementos(1,marcos[i],i,atributos);
+                cargarElementos(1,marcos[i],i,atributos);
+            }
         }
     });
 });
