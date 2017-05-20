@@ -99,6 +99,23 @@
                                     </li>
                                 </ul>
                             </li>
+                            
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a id="guardarInvitado">Guardar estilo</a>
+
+
+                                    </li>
+                                    <li><a id="opcion2">Descargar PDF</a>
+
+                                    </li>
+
+                                    <li><a id="opcion3">Opcion 3</a>
+
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
