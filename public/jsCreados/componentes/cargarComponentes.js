@@ -22,6 +22,7 @@ function cargarMotor(idMotor) {
             atributos="Modelo:"+motor.modelo+
                 " - Revoluciones: "+motor.revoluciones+
                 " - Voltaje "+motor.voltaje;
+            localStorage.setItem("idMotor",idMotor);
             cargar(motor,"#imgMotor",atributos);
         }
     });
@@ -40,6 +41,7 @@ function cargarMarco(idMarco) {
                 " - Color: "+marco.color+
                 " - Material: "+marco.material+
                 " - Número de helices: "+marco.numeroHelices;
+            localStorage.setItem("idMarco",idMarco);
             cargar(marco,"#imgMarco",atributos);
         }
     });
@@ -56,6 +58,7 @@ function cargarBateria(idBateria) {
                 " - Voltaje: "+bateria.voltaje+
                 " - Duración: "+bateria.duracion+
                 " - Tipo: "+bateria.tipo;
+            localStorage.setItem("idBateria",idBateria);
             cargar(bateria,"#imgBateria",atributos);
         }
     });
@@ -70,6 +73,7 @@ function cargarGps (idGps) {
             var gps = pedido.gps[idGps-1];
             atributos="Nombre: "+gps.nombre+
                 " - Modelo: "+gps.modelo;
+            localStorage.setItem("idGps",idGps);
             cargar(gps,"#imgGps",atributos);
         }
     });
@@ -85,6 +89,7 @@ function cargarControl (idControl) {
             atributos="Modelo: "+mando.modelo+
                 " - Plataforma: "+mando.plataforma+
                 " - Frecuencia: "+mando.frecuencia;
+            localStorage.setItem("idControl",idControl);
             cargar(mando,"#imgControl",atributos);
 
         }
@@ -101,6 +106,7 @@ function cargarCamara(idCamara) {
             atributos="Modelo: "+camara.modelo+
                 " - Marca: "+camara.marca+
                 " - Megapixeles: "+camara.megapixeles;
+            localStorage.setItem("idCamara",idCamara);
             cargar(camara,"#imgCamara",atributos);
         }
     });
