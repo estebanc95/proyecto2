@@ -99,7 +99,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -107,7 +107,7 @@
 
 
                                     </li>
-                                    <li><a id="opcion2">Descargar PDF</a>
+                                    <li><a id="opcion2" href="/comprobante">Descargar PDF</a>
 
                                     </li>
 
