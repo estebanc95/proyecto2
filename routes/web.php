@@ -249,3 +249,4 @@ Route::get('/comprobante','ComprobanteController@obtenerComprobante');
 Route::get('/almacenar','AlmacenarDronController@almacenar');
 
 Route::get('recuperar','AlmacenarDronController@recuperar');
+
