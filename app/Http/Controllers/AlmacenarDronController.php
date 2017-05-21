@@ -8,7 +8,7 @@ use App\Modelos_Almacenados;
 
 class AlmacenarDronController extends Controller
 {
-    public function almacenar()
+    public function almacenar($nombre)
     {
         $idMotor = $_COOKIE["idMotor"];
         $idMarco = $_COOKIE["idMarco"];
@@ -17,8 +17,7 @@ class AlmacenarDronController extends Controller
         $idCamara = $_COOKIE["idCamara"];
         $idGps = $_COOKIE["idGps"];
 
-        $idUsuario = 3;
-        $nombre = "hola";
+        $idUsuario = \Auth::user()->id;
 
         DB::table('modelos_almacenados')->insert(
             ['id_usuario' => $idUsuario, 'nombre' => $nombre,'id_motor' => $idMotor,'id_marco' => $idMarco,

@@ -246,7 +246,7 @@ Route::delete('/precargado/{id}', 'AdminPrecargadosController@eliminarPrecargado
 
 Route::get('/comprobante','ComprobanteController@obtenerComprobante');
 
-Route::get('/almacenar','AlmacenarDronController@almacenar');
+Route::get('/almacenar/{nombre}','AlmacenarDronController@almacenar');
 
 Route::get('recuperar','AlmacenarDronController@recuperar');
 
