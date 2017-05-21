@@ -15,4 +15,9 @@ class PagesController extends Controller
    	{
    		return view('drones.quienes-somos');
    	}
+    
+    public function admin()
+    {
+        return view ('drones.admin');
+    }
 }

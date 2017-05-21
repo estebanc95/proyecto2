@@ -4,15 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Simulador de Drones - IAW 2017</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <!-- Font de Google -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    
+    
+    <!-- FAVICON RESPONSIVO -->
 
+    <link rel="apple-touch-icon" sizes="57x57" href="imagenes/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="imagenes/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="imagenes/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="imagenes/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="imagenes/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="imagenes/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="imagenes/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="imagenes/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagenes/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="imagenes/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon/favicon-16x16.png">
+    <link rel="manifest" href="imagenes/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="imagenes/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -35,15 +63,59 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    <a class="navbar-brand" href="#"><img src="  imagenes/logoWhite.png" class="img-responsive" alt="Logo Air Fly"></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li ><a href="quienes-somos">Quienes somos</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estilos <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a id="estilo1">Estilo 1</a>
+
+
+                                </li>
+                                <li><a id="estilo2">Estilo 2</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Precargados <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a id="precargado1">Precargado 1</a>
+
+
+                                </li>
+                                <li><a id="precargado2">Precargado 2</a>
+
+                                </li>
+
+                                <li><a id="randomModelos">Random</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a id="guardarInvitado">Guardar estilo</a>
+
+
+                                </li>
+                                <li><a id="opcion2">Descargar PDF</a>
+
+                                </li>
+
+                                <li><a id="opcion3">Opcion 3</a>
+
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -79,6 +151,24 @@
         </nav>
 
         @yield('content')
+    </div>
+    
+    <div class="container-fluid paddingFooter">
+        <div class="row paddingFooter separacionFooter">
+            <div class="col-lg-12 paddingFooter">
+                <div class="cajaFooter">
+                    <img src="imagenes/footerCity.jpg" class="img-responsive center-block" alt="footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid paddingFooter">
+        <div class="row paddingFooter">
+            <div class="col-lg-12 paddingFooter colorFooter">
+                Diseñado y desarrollado por Esteban Canela y Germán Herrou
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
