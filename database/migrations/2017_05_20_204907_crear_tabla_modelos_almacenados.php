@@ -39,6 +39,7 @@ class CrearTablaModelosAlmacenados extends Migration
 
             $table->integer('id_gps')->unsigned();
             $table->foreign('id_gps')->references('id')->on('gps');
+            $table->timestamps();
 
         });
     }
