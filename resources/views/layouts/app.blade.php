@@ -12,6 +12,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="/css/style-app.css" rel="stylesheet">
+    
+    @yield('estilos')
     
     <!-- Font de Google -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -63,7 +66,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="#"><img src="  imagenes/logoWhite.png" class="img-responsive" alt="Logo Air Fly"></a>
+                    <a class="navbar-brand" href="/"><img src="/imagenes/logoWhite.png" class="img-responsive" alt="Logo Air Fly"></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -157,7 +160,7 @@
         <div class="row paddingFooter separacionFooter">
             <div class="col-lg-12 paddingFooter">
                 <div class="cajaFooter">
-                    <img src="imagenes/footerCity.jpg" class="img-responsive center-block" alt="footer">
+                    <img src="/imagenes/footerCity.jpg" class="img-responsive center-block" alt="footer">
                 </div>
             </div>
         </div>
@@ -170,7 +173,8 @@
             </div>
         </div>
     </div>
-
+    
+    @yield('escripts')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

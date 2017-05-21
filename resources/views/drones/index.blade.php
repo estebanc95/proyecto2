@@ -116,6 +116,8 @@
                                     </li>
                                 </ul>
                             </li>
+                            
+                            <li ><a href="/login">Login</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
