@@ -250,3 +250,9 @@ Route::get('/almacenar','AlmacenarDronController@almacenar');
 
 Route::get('recuperar','AlmacenarDronController@recuperar');
 
+
+Route::get('/recuperar','AlmacenarDronController@recuperar');
+
+Route::get('/dron/{motor}/{marco}/{control}/{bateria}/{camara}/{gps}','LinkDronController@obtenerDronDeLink');
+
+Route::get('/obtenerUrl','LinkDronController@obtenerUrl');

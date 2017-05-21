@@ -33,14 +33,17 @@ class AlmacenarDronController extends Controller
         $idDron = 6;
         $miDron = Modelos_Almacenados::find($idDron);
 
+        echo $miDron->id_motor;
+        echo $miDron->id_marco;
+        echo $miDron->id_control;
 
-        $_COOKIE["idMotor"] = $miDron->id_motor;
-        $_COOKIE["idMarco"] = $miDron->id_marco;
-        $_COOKIE["idControl"] = $miDron->id_control;
-        $_COOKIE["idBateria"] = $miDron->id_bateria;
-        $_COOKIE["idCamara"] = $miDron->id_camara;
-        $_COOKIE["idGps"] = $miDron->id_gps;
+        setcookie('idMotor', $miDron->id_motor, time() + 1800);
+        setcookie('idMarco', $miDron->id_marco, time() + 1800);
+        setcookie('idControl', $miDron->id_control, time() + 1800);
+        setcookie('idBateria', $miDron->id_bateria, time() + 1800);
+        setcookie('idCamara', $miDron->id_camara, time() + 1800);
+        setcookie('idGps', $miDron->id_gps, time() + 1800);
 
-        return redirect('/');
+        return back();
     }
 }
