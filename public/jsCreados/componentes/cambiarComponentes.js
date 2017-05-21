@@ -35,7 +35,7 @@ function cambiarComponentes(idComponente,mod) {
 
 
 
-function cargarMotor(idMotor,mod,ubicacionDeImagen) {
+function cargarMotor(mod,ubicacionDeImagen) {
     $.ajax({
         url: "/elementosMotores",
         context: document.body,
@@ -45,6 +45,7 @@ function cargarMotor(idMotor,mod,ubicacionDeImagen) {
             var motor = pedido.motores;
             var elementoComponenteID = motor[mod-1];
             $(ubicacionDeImagen).attr('src',elementoComponenteID.imagen);
+            $.cookie("idMotor",mod);
         }
     });
 }
@@ -59,6 +60,7 @@ function cargarMarco(mod,ubicacionDeImagen) {
             var marco=pedido.marcos;
             var elementoComponenteID = marco[mod-1];
             $(ubicacionDeImagen).attr('src',elementoComponenteID.imagen);
+            $.cookie("idMarco",mod);
         }
     });
 }
@@ -72,6 +74,7 @@ function cargarBateria(mod,ubicacionDeImagen) {
             var bateria = pedido.baterias;
             var elementoComponenteID = bateria[mod-1];
             $(ubicacionDeImagen).attr('src',elementoComponenteID.imagen);
+            $.cookie("idBateria",mod);
         }
     });
 }
@@ -85,6 +88,7 @@ function cargarGps (mod,ubicacionDeImagen) {
             var gps = pedido.gps;
             var elementoComponenteID = gps[mod-1];
             $(ubicacionDeImagen).attr('src',elementoComponenteID.imagen);
+            $.cookie("idGps",mod);
         }
     });
 }
@@ -98,6 +102,7 @@ function cargarControl (mod,ubicacionDeImagen) {
             var mando = pedido.controles;
             var elementoComponenteID = mando[mod-1];
             $(ubicacionDeImagen).attr('src',elementoComponenteID.imagen);
+            $.cookie("idControl",mod);
         }
     });
 }
@@ -111,6 +116,7 @@ function cargarCamara(mod,ubicacionDeImagen) {
             var camara = pedido.camaras;
             var elementoComponenteID = camara[mod-1];
             $(ubicacionDeImagen).attr('src',elementoComponenteID.imagen);
+            $.cookie("idCamara",mod);
         }
     });
 }

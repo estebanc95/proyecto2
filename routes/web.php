@@ -30,14 +30,13 @@ Route::get('/elementosMotores', 'ComponentesController@jsonMotores');
 
 Route::get('/elementosMarcos', 'ComponentesController@jsonMarcos');
 
-Route::get('/elementosGpss', 'ComponentesController@jsonCamaras');
+Route::get('/elementosCamaras', 'ComponentesController@jsonCamaras');
 
 Route::get('/elementosBaterias', 'ComponentesController@jsonBaterias');
 
 Route::get('/elementosGps', 'ComponentesController@jsonGps');
 
 Route::get('/elementosControles', 'ComponentesController@jsonControles');
-
 
 
 /** ------------------------- ADMINISTRADOR ------------------------- **/
@@ -244,3 +243,6 @@ Route::get('/precargados/{id}','AdminPrecargadosController@listaEdicionPrecargad
  * Eliminar un precargado existente
  */
 Route::delete('/precargado/{id}', 'AdminPrecargadosController@eliminarPrecargado');
+
+Route::get('comprobante','ComprobanteController@obtenerComprobante');
+
