@@ -16,13 +16,13 @@ class CrearTablaPrecargados extends Migration
         Schema::create('precargados', function (Blueprint $table) {
 
             $table->increments('id');
-
             $table->integer('id_motor')->unsigned();
             $table->integer('id_marco')->unsigned();
             $table->integer('id_control')->unsigned();
             $table->integer('id_bateria')->unsigned();
             $table->integer('id_camara')->unsigned();
             $table->integer('id_gps')->unsigned();
+            $table->timestamps();
            
 
         });
