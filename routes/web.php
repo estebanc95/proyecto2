@@ -258,3 +258,5 @@ Route::get('/dron/{motor}/{marco}/{control}/{bateria}/{camara}/{gps}','LinkDronC
 Route::get('/obtenerUrl','LinkDronController@obtenerUrl');
 
 Route::get('/loginIn','LoginController@login');
+
+Route::get('/userInv','UserInvitadoController@index');
