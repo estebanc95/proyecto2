@@ -19,10 +19,16 @@ class ComprobanteController extends Controller
         $idCamara = $_COOKIE["idCamara"];
         $idGps = $_COOKIE["idGps"];
 
-        $miMotor = Motor::find($idMotor);
+        $nombreMotor = Motor::find($idMotor)->modelo;
+        $nombreMarco = Motor::find($idMarco)->modelo;
+        $nombreControl = Motor::find($idControl)->modelo;
+        $nombreBateria = Motor::find($idBateria)->modelo;
+        $nombreCamara = Motor::find($idCamara)->modelo;
+        $nombreGps = Motor::find($idGps)->modelo;
 
         $pdf = App::make('dompdf.wrapper');
-        $pdf = PDF::loadView('drones.comprobante',['motor'=>$idMotor,'marco'=>$idMarco,'control'=>$idControl,'bateria'=>$idBateria,'camara'=>$idCamara,'gps'=>$idGps]);
+        $pdf = PDF::loadView('drones.comprobante',['motor'=>$nombreMotor,'marco'=>$nombreMarco,'control'=>$nombreControl,
+        'bateria'=>$nombreBateria,'camara'=>$nombreCamara,'gps'=>$nombreGps]);
         return $pdf->stream();
     }
 }
