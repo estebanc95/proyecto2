@@ -38,7 +38,6 @@ Route::get('/elementosGps', 'ComponentesController@jsonGps');
 
 Route::get('/elementosControles', 'ComponentesController@jsonControles');
 
-
 /** ------------------------- ADMINISTRADOR ------------------------- **/
 
 /**
@@ -244,5 +243,9 @@ Route::get('/precargados/{id}','AdminPrecargadosController@listaEdicionPrecargad
  */
 Route::delete('/precargado/{id}', 'AdminPrecargadosController@eliminarPrecargado');
 
-Route::get('comprobante','ComprobanteController@obtenerComprobante');
 
+Route::get('/comprobante','ComprobanteController@obtenerComprobante');
+
+Route::get('/almacenar','AlmacenarDronController@almacenar');
+
+Route::get('recuperar','AlmacenarDronController@recuperar');
