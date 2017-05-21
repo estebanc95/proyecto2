@@ -10,6 +10,18 @@
     <p>
         Marco {{$marco}}
     </p>
+    <p>
+        Control {{$control}}
+    </p>
+    <p>
+        Bateria {{$bateria}}
+    </p>
+    <p>
+        Camara {{$camara}}
+    </p>
+    <p>
+        Gps {{$gps}}
+    </p>
 </body>
 
 </html>

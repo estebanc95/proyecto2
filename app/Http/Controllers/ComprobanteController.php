@@ -13,12 +13,16 @@ class ComprobanteController extends Controller
     {
 
         $idMotor = $_COOKIE["idMotor"];
-        echo $idMotor;
+        $idMarco = $_COOKIE["idMarco"];
+        $idControl = $_COOKIE["idControl"];
+        $idBateria = $_COOKIE["idBateria"];
+        $idCamara = $_COOKIE["idCamara"];
+        $idGps = $_COOKIE["idGps"];
 
         $miMotor = Motor::find($idMotor);
 
         $pdf = App::make('dompdf.wrapper');
-        $pdf = PDF::loadView('drones.comprobante',['motor'=>$idMotor,'marco'=>'3']);
+        $pdf = PDF::loadView('drones.comprobante',['motor'=>$idMotor,'marco'=>$idMarco,'control'=>$idControl,'bateria'=>$idBateria,'camara'=>$idCamara,'gps'=>$idGps]);
         return $pdf->stream();
     }
 }
