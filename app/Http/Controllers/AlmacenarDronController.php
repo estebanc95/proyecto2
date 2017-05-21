@@ -30,12 +30,8 @@ class AlmacenarDronController extends Controller
 
     public function recuperar()
     {
-        $idDron = 6;
+        $idDron = 7;
         $miDron = Modelos_Almacenados::find($idDron);
-
-        echo $miDron->id_motor;
-        echo $miDron->id_marco;
-        echo $miDron->id_control;
 
         setcookie('idMotor', $miDron->id_motor, time() + 1800);
         setcookie('idMarco', $miDron->id_marco, time() + 1800);
