@@ -33,7 +33,8 @@ class LinkDronController extends Controller
         $idCamara = $_COOKIE["idCamara"];
         $idGps = $_COOKIE["idGps"];
 
-        return '/dron/'.$idMotor.'/'.$idMarco.'/'.$idControl.'/'.$idBateria.'/'.$idCamara.'/'.$idGps.'/';
+        $valor = '/dron/'.$idMotor.'/'.$idMarco.'/'.$idControl.'/'.$idBateria.'/'.$idCamara.'/'.$idGps.'/';
+        return view('drones.miUrl')->with('valor', $valor);
 
     }
 }
