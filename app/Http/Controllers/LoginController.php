@@ -14,7 +14,7 @@ class LoginController extends Controller
         }
         else
         {
-            return Redirect('/home');
+            return Redirect('/userReg');
         }
     }
 }

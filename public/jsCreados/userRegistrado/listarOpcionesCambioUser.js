@@ -13,7 +13,7 @@ $(document).ready(function() {
 
         switch (i) {
             case 0:
-                htmlSave=htmlSave+  "<div id='componenteGrabar' class='componentesDrone text-center'>"+ "<br>" +"Grabar drone"+ "<br>" +"<a href='/motores'>"+"<img src='imagenes/iconosUser/save.png' class='img-responsive center-block imgClick' alt='Imagen componentes de un drone'/>" + "</div></div>"
+                htmlSave=htmlSave+  "<div id='componenteGrabar' class='componentesDrone text-center'>"+ "<br>" +"Grabar drone"+ "<br>" +"<a href='/guardarModelo'>"+"<img src='imagenes/iconosUser/save.png' class='img-responsive center-block imgClick' alt='Imagen componentes de un drone'/>" + "</div></div>"
                 break;
             case 1:
                 htmlSave=htmlSave+  "<div id='componenteRecuperar' class='componentesDrone text-center'>"+ "<br>" +"Recuperar drone"+ "<br>"+ "<a href='/marcos'>"+"<img src='imagenes/iconosUser/restore.png' class='img-responsive center-block imgClick' alt='Imagen componentes de un drone'/>" + "</div></div>"

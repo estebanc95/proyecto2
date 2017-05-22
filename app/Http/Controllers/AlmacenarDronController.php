@@ -8,8 +8,9 @@ use App\Modelos_Almacenados;
 
 class AlmacenarDronController extends Controller
 {
-    public function almacenar($nombre)
+    public function almacenar(Request $request)
     {
+        $nombre = $request->nombre;
         $idMotor = $_COOKIE["idMotor"];
         $idMarco = $_COOKIE["idMarco"];
         $idControl = $_COOKIE["idControl"];

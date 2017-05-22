@@ -246,7 +246,7 @@ Route::delete('/precargado/{id}', 'AdminPrecargadosController@eliminarPrecargado
 
 Route::get('/comprobante','ComprobanteController@obtenerComprobante');
 
-Route::get('/almacenar/{nombre}','AlmacenarDronController@almacenar');
+Route::post('/almacenar','AlmacenarDronController@almacenar');
 
 Route::get('recuperar','AlmacenarDronController@recuperar');
 
@@ -259,4 +259,6 @@ Route::get('/obtenerUrl','LinkDronController@obtenerUrl');
 
 Route::get('/loginIn','LoginController@login');
 
-Route::get('/userInv','UserInvitadoController@index');
+Route::get('/userReg','UserRegistradoController@index');
+
+Route::get('/guardarModelo','UserRegistradoController@guardarModelo');

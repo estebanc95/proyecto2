@@ -14,8 +14,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/style-app.css" rel="stylesheet">
     
-    @yield('estilos')
-    
     <!-- Font de Google -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
@@ -50,6 +48,9 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+    
+    @yield('css')
+    
 </head>
 <body>
     <div id="app">
