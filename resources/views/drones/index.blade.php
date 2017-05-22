@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -94,30 +94,30 @@
 
                                     </li>
 
-                                    <li><a id="randomModelos">Random</a>
-
-                                    </li>
                                 </ul>
                             </li>
 
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a id="guardarInvitado">Guardar estilo</a>
+                                    <li><a id="guardarInvitado" href="/obtenerUrl">Obtener URL</a>
 
 
                                     </li>
                                     <li><a id="opcion2" href="/comprobante">Descargar PDF</a>
 
                                     </li>
-
-                                    <li><a id="opcion3">Opcion 3</a>
-
-                                    </li>
                                 </ul>
                             </li>
-                            
-                            <li ><a href="/login">Login</a></li>
+                            @if (Auth::check())
+                                @if(Auth::user()->is_admin())
+                                    <li ><a href="/admin">Admin</a></li>
+                                @else
+                                    <li ><a href="/userReg">Usuario</a></li>
+                            @endif
+                            @else   
+                                    <li ><a href="/login">Login</a></li>
+                            @endif
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->

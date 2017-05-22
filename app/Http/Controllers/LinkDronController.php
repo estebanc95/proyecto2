@@ -13,12 +13,12 @@ class LinkDronController extends Controller
         echo $motor;
         echo $gps;
 
-        setcookie('idMotor', $motor, time() + 1800);
-        setcookie('idMarco', $marco, time() + 1800);
-        setcookie('idControl', $control, time() + 1800);
-        setcookie('idBateria', $bateria, time() + 1800);
-        setcookie('idCamara', $camara, time() + 1800);
-        setcookie('idGps', $gps, time() + 1800);
+        setcookie('idMotor', $motor, time() + 1800,"/");
+        setcookie('idMarco', $marco, time() + 1800,"/");
+        setcookie('idControl', $control, time() + 1800,"/");
+        setcookie('idBateria', $bateria, time() + 1800,"/");
+        setcookie('idCamara', $camara, time() + 1800,"/");
+        setcookie('idGps', $gps, time() + 1800,"/");
 
         return Back();
 

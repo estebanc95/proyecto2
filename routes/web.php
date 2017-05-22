@@ -248,10 +248,7 @@ Route::get('/comprobante','ComprobanteController@obtenerComprobante');
 
 Route::post('/almacenar','AlmacenarDronController@almacenar');
 
-Route::get('recuperar','AlmacenarDronController@recuperar');
-
-
-Route::get('/recuperar','AlmacenarDronController@recuperar');
+Route::post('/recuperar/{id}','AlmacenarDronController@recuperar');
 
 Route::get('/dron/{motor}/{marco}/{control}/{bateria}/{camara}/{gps}','LinkDronController@obtenerDronDeLink');
 
@@ -263,6 +260,14 @@ Route::get('/userReg','UserRegistradoController@index');
 
 Route::get('/guardarModelo','UserRegistradoController@guardarModelo');
 
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider')->name('facebook');
 
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/modelos','UserRegistradoController@mostrarTodosModelos');
+
+
+
+
+
+
+Route::get('auth/facebook', 'SocialAuthController@redirectToProvider')->name('fblogin');
+
+Route::get('auth/facebook/callback', 'SocialAuthController@handleProviderCallback');
