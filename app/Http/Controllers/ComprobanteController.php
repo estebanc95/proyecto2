@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use App;
 use PDF;
 use App\Motor;
+use App\Marco;
+use App\Control;
+use App\Bateria;
+use App\Camara;
+use App\Gps;
 
 class ComprobanteController extends Controller
 {
@@ -20,11 +25,11 @@ class ComprobanteController extends Controller
         $idGps = $_COOKIE["idGps"];
 
         $nombreMotor = Motor::find($idMotor)->modelo;
-        $nombreMarco = Motor::find($idMarco)->modelo;
-        $nombreControl = Motor::find($idControl)->modelo;
-        $nombreBateria = Motor::find($idBateria)->modelo;
-        $nombreCamara = Motor::find($idCamara)->modelo;
-        $nombreGps = Motor::find($idGps)->modelo;
+        $nombreMarco = Marco::find($idMarco)->modelo;
+        $nombreControl = Control::find($idControl)->modelo;
+        $nombreBateria = Bateria::find($idBateria)->modelo;
+        $nombreCamara = Camara::find($idCamara)->modelo;
+        $nombreGps = Gps::find($idGps)->modelo;
 
         $pdf = App::make('dompdf.wrapper');
         $pdf = PDF::loadView('drones.comprobante',['motor'=>$nombreMotor,'marco'=>$nombreMarco,'control'=>$nombreControl,
