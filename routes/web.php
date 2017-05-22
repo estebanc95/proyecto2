@@ -264,10 +264,5 @@ Route::get('/guardarModelo','UserRegistradoController@guardarModelo');
 Route::get('/modelos','UserRegistradoController@mostrarTodosModelos');
 
 
-
-
-
-
-Route::get('auth/facebook', 'SocialAuthController@redirectToProvider')->name('fblogin');
-
-Route::get('auth/facebook/callback', 'SocialAuthController@handleProviderCallback');
+Route::get('/redirect', 'SocialController@redirect');
+Route::get('/callback', 'SocialController@callback');
