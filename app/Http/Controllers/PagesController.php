@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Precargado;
 
 class PagesController extends Controller
 {
    	public function index()
    	{
-   		return view ('drones.index');
+        $precargados = Precargado::all();
+        return view ('drones.index')->with('precargados', $precargados);
+
    	}
 
    	public function quienesSomos()

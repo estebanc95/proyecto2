@@ -87,19 +87,6 @@
                             </ul>
                         </li>
 
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Precargados <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a id="precargado1">Precargado 1</a>
-
-
-                                </li>
-                                <li><a id="precargado2">Precargado 2</a>
-
-                                </li>
-                                
-                            </ul>
-                        </li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>

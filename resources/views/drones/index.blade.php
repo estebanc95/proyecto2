@@ -86,13 +86,13 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Precargados <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a id="precargado1">Precargado 1</a>
+                                    @foreach ($precargados as $precargado)
+                                    <li><a id="precargado" class="precargado" onClick='cargarComponentes({{$precargado->id_motor}},{{$precargado->id_marco}},{{$precargado->id_control}},{{$precargado->id_bateria}},{{$precargado->id_camara}},{{$precargado->id_gps}})'>Precargado {{$precargado->id}}</a>
 
 
                                     </li>
-                                    <li><a id="precargado2">Precargado 2</a>
-
-                                    </li>
+                                    @endforeach
+        
 
                                 </ul>
                             </li>
@@ -343,10 +343,6 @@
             <!-- Precargados de la web-->
 
             <script src="/jsCreados/precargados/precargar1.js"></script>
-
-            <script src="/jsCreados/precargados/precargar2.js"></script>
-
-            <script src="/jsCreados/precargados/randomCargado.js"></script>
 
             <!-- Seleccion de componentes -->
 
