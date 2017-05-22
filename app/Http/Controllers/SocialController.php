@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Socialite;
+use App\User;
 
 class SocialController extends Controller
 {
@@ -12,7 +13,19 @@ class SocialController extends Controller
     }
     
     public function callback () {
-        $user = Socialite::driver('facebook')->user();
-        return ($user->getAvatar());
+        $facebook = Socialite::driver('facebook')->user();
+        $user = User::whereEmail($facebook->getEmail())->first();    
+
+        if (!$user) {
+            $user = User::create([
+                'email' => $facebook->getEmail(),
+                'name' => $facebook->getName(),
+                'password' => '<no_pass>',
+            ]);
+        }
+
+        auth()->login($user);
+
+        return redirect()->to('/');
     }
 }
