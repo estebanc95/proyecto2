@@ -262,3 +262,7 @@ Route::get('/loginIn','LoginController@login');
 Route::get('/userReg','UserRegistradoController@index');
 
 Route::get('/guardarModelo','UserRegistradoController@guardarModelo');
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider')->name('facebook');
+
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
